@@ -32,14 +32,14 @@
           </div>
         </a>
         <div class="article-description col-6 col-sm-12 hidden-large">
-      <?php } else if ($span == 2) { ?>
+      <?php } elseif ($span == 2) { ?>
         <a href="<?php the_permalink(); ?>">
           <div class="article-image col-6">
             <div class="image" style="background-image: url(<?php echo $image_url ?>)"></div>
           </div>
         </a>
         <div class="article-description col-6">
-      <?php } else if ($span == 3) { ?>
+      <?php } elseif ($span == 3) { ?>
         <a href="<?php the_permalink(); ?>">
           <div class="article-image col-6 col-sm-8">
             <div class="image" style="background-image: url(<?php echo $image_url ?>)"></div>
