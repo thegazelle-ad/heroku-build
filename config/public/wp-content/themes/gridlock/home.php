@@ -9,9 +9,12 @@
 get_header(); ?>
 
     <?php
-      $meta_query = new WP_Query(array('showposts' => 5, 'orderby' => 'meta_value', 'meta_key' => 'gridlock', 'order' => 'ASC' ));
+      $meta_query = new WP_Query(array('showposts' => 10, 'orderby' => 'meta_value', 'meta_key' => 'gridlock', 'order' => 'ASC' ));
       $old_row = 0;
       while ( $meta_query->have_posts() ) : $meta_query->the_post(); 
+        if (get_post_meta(get_the_ID(), "gridlock", true)) {
+            
+          
             // get the grid positioning
             // Exmaple input is 32.12, meaning row 32, index starting at 1, spanning 2
             $gridlock =  explode(".", get_post_meta( get_the_ID(), "gridlock", true)); 
@@ -51,6 +54,12 @@ get_header(); ?>
               // closing the row if the post finishes it
               echo "</div>";
             }
-        endwhile; 
-        ?>
+        } else { ?>
+          <div class='row gridlock-row'>
+            <div class="article-container col-12">
+              <?php get_template_part( 'content' ); ?> 
+            </div>
+          </div>
+        <?php } 
+        endwhile; ?> 
 <?php get_footer(); ?>
