@@ -17,6 +17,7 @@ get_header(); ?>
               <?php echo the_ID(); ?>
               <?php echo the_title(); ?>
               <?php echo the_content(); ?>
+              <?php echo get_post_meta( get_the_ID(), "gridlock", true); ?>
               
             </div>
           </div>
