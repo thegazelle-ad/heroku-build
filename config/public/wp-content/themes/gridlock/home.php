@@ -16,8 +16,9 @@ get_header(); ?>
             <div class="article-container col-12">
               <?php echo the_ID(); ?>
               <?php echo the_title(); ?>
-              <?php echo the_content(); ?>
+              <?php get_template_part( 'content' ); ?>
               <?php echo get_post_meta( get_the_ID(), "gridlock", true); ?>
+              <?php get_template_part( 'content', 'grid' ); ?>
               
             </div>
           </div>
