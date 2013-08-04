@@ -42,9 +42,11 @@ get_header(); ?>
             }
           ?>
           ">
+          This is before
           <?php get_template_part( 'content', 'grid' ); 
           // closing the column tag
           ?>
+          This is after
           </div>
           <?php
             //get_template_part( 'content', get_post_format() );
