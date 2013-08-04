@@ -27,7 +27,7 @@ if ( ! isset( $content_width ) )
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
  */
-function twentytwelve_setup() {
+function gridlock_setup() {
   // This theme styles the visual editor with editor-style.css to match the theme style.
   add_editor_style("css/editor-style.css");
 

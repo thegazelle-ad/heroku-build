@@ -46,8 +46,7 @@
           </div>
         </a>
         <div class="article-description col-6 col-sm-4">
-      <?php } ?>
-    <?php } else { ?>
+      <?php } } else { ?>
       <div class="article-description col-12">
     <?php } ?>
         <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'gridlock' ),  the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"<?php the_title(); ?> >

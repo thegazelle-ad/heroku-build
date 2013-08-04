@@ -24,10 +24,10 @@ img {
     border-width: 0px;
     border-right-width: 1px; }
   .article-container .article-image {
-    height: 180px; }
+    height: 220px; }
     .article-container .article-image .image {
       width: 100%;
-      height: 180px;
+      height: 220px;
       position: relative;
       background-size: cover;
       background-position: center;
@@ -35,7 +35,7 @@ img {
     .article-container .article-image .image-overlay {
       display: none; }
   .article-container .article-description {
-    height: 180px; }
+    height: 220px; }
 
 .row .row {
   margin: 0px 0px; }
