@@ -1,6 +1,6 @@
 [submodule "config/public/wp-content/themes/gridlock"]
 	path = config/public/wp-content/themes/gridlock
-	url = git://github.com:lingz/gridlock.git
+	url = https://github.com:lingz/gridlock.git
 [submodule "config/public/wp-content/plugins/issuer"]
 	path = config/public/wp-content/plugins/issuer
-	url = git://github.com:lingz/issuer.git
+	url = https://github.com:lingz/issuer.git
