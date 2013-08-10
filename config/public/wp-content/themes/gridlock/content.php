@@ -12,19 +12,19 @@
     <?php 
       $image_url = false;
       if (has_post_thumbnail()) {
-        $image_url =  wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(300, 300), false, '')[0]; 
+        $image_url =  wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(300, 300), false, ''); 
+        $image_url = $image_url[0];
       } else {
         $image_url = catch_image();
       }
       ?>
     <? if ($image_url) { ?>
-      <?php $span =  explode(".", get_post_meta( get_the_ID(), "gridlock", true))[1][1]; ?>
-        <div class="article-image col-6">
-          <a href="<?php the_permalink(); ?>">
-            <div class="image" style="background-image: url(<?php echo $image_url ?>)"></div>
-          </a>
-        </div>
-        <div class="article-description col-6">
+      <div class="article-image col-6">
+        <a href="<?php the_permalink(); ?>">
+          <div class="image" style="background-image: url(<?php echo $image_url ?>)"></div>
+        </a>
+      </div>
+      <div class="article-description col-6">
     <?php } else { ?>
       <div class="article-description col-12">
     <?php } ?>

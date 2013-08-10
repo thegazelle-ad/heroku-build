@@ -1,0 +1,43 @@
+.gridster li {
+  background: #333333; 
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box; /* Firefox */
+}
+.gridlock-container {
+  width: 1200px;
+  margin-left: 0px;
+}
+.col-7 {
+  padding-top: 65px; 
+}
+.col-5 {
+  padding-right: 0px; 
+}
+.gridlocker {
+  background: #dddddd;
+}
+.sidebar {
+  background: #eeeeee;
+  padding: 15px;
+  margin-top: 20px;
+  float: left;
+  height: 100%;
+}
+
+.gridster {
+  padding: 20px 10px;
+}
+
+#grid-buttons {
+  padding-left: 10px;
+  padding-right: 15px;
+}
+.gridster-box {
+  padding: 0px 20px;
+}
+.gridster-box .row {
+  margin-top: 10px;
+}

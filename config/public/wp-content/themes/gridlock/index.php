@@ -9,7 +9,7 @@
 get_header(); ?>
 
     <?php
-      $meta_query = new WP_Query(array('showposts' => 5 ));
+      $meta_query = new WP_Query(array('posts_per_page' => 10 ));
       $old_row = 0;
       while ( $meta_query->have_posts() ) : $meta_query->the_post(); ?>
           <div class='row gridlock-row'>

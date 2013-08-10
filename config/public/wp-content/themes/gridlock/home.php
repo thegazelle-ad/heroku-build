@@ -8,23 +8,22 @@
 
 get_header(); ?>
 
+  <div id="home">
+    <div class='row gridlock-row'>
     <?php
-      $meta_query = new WP_Query(array('showposts' => 10, 'orderby' => 'meta_value', 'meta_key' => 'gridlock', 'order' => 'ASC' ));
-      $old_row = 0;
+      $finished = false;
+      $max_row = get_option("gridlock_rows");
+      if ($max_row == 0) {
+        $max_row = 999;
+      }
+      $row_count = 0;
+      $meta_query = new WP_Query(array_merge(get_option("gridlock_query"), array('orderby' => 'meta_value', 'meta_key' => 'gridlock', 'order' => 'ASC', "post_status" => "publish" )));
       while ( $meta_query->have_posts() ) : $meta_query->the_post(); 
-        if (get_post_meta(get_the_ID(), "gridlock", true)) {
-          
             // get the grid positioning
-            // Exmaple input is 32.12, meaning row 32, index starting at 1, spanning 2
+            // Example input is 32.12, meaning row 32, index starting at 1, spanning 2
             $gridlock =  explode(".", get_post_meta( get_the_ID(), "gridlock", true)); 
-            $row = $gridlock[0]; 
             $index = $gridlock[1][0]; 
             $span = $gridlock[1][1];
-            if ($old_row != $row) {
-              // start a new row if the rows don't match
-              echo "<div class='row gridlock-row'>";
-              $old_row = $row;
-            }
           ?>
           <div class="article-container col-12 
           <?php
@@ -42,25 +41,28 @@ get_header(); ?>
             }
           ?>
           ">
-          This is before
           <?php get_template_part( 'content', 'grid' ); 
           // closing the column tag
           ?>
-          This is after
           </div>
           <?php
             //get_template_part( 'content', get_post_format() );
-
+            $finished = false;
             if ($index + $span == 4) {
               // closing the row if the post finishes it
               echo "</div>";
+              // open the next post
+              echo "<div class='row gridlock-row'>";
+              $finished = true;
+              if (++$row_count == $max_row) {
+                break;
+              }
             }
-        } else { ?>
-          <div class='row gridlock-row'>
-            <div class="article-container col-12">
-              <?php get_template_part( 'content' ); ?> 
-            </div>
-          </div>
-        <?php } 
         endwhile; ?> 
+      </div>  
+      <?php if (!$finished) { // workaround for hiding the last div ?>
+        <div class="gridlock-row"></div>
+      <?php } ?>
+  </div>
+      
 <?php get_footer(); ?>
