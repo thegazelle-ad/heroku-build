@@ -41,11 +41,11 @@ define("DB_HOST", trim($url["host"]));
 define("DB_CHARSET", "utf8");
 
 /** Allows both foobar.com and foobar.herokuapp.com to load media assets correctly. */
-//define("WP_SITEURL", "http://" . $_SERVER["HTTP_HOST"]);
-define("WP_SITEURL", "http://" . "thegazelle.org");
+define("WP_SITEURL", "http://" . $_SERVER["HTTP_HOST"]);
+//define("WP_SITEURL", "http://" . "thegazelle.org");
 
 /** WP_HOME is your Blog Address (URL). */
-define('WP_HOME', "http://thegazelle.herokuapp.com");
+define('WP_HOME', "http://thegazelle.org");
 
 define("FORCE_SSL_LOGIN", getenv("FORCE_SSL_LOGIN") == "true");
 define("FORCE_SSL_ADMIN", getenv("FORCE_SSL_ADMIN") == "true");
