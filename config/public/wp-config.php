@@ -44,7 +44,7 @@ define("DB_CHARSET", "utf8");
 define("WP_SITEURL", "http://" . $_SERVER["HTTP_HOST"]);
 
 /** WP_HOME is your Blog Address (URL). */
-// define('WP_HOME', "http://" . $_SERVER["HTTP_HOST"]);
+define('WP_HOME', "http://thegazelle.org");
 
 define("FORCE_SSL_LOGIN", getenv("FORCE_SSL_LOGIN") == "true");
 define("FORCE_SSL_ADMIN", getenv("FORCE_SSL_ADMIN") == "true");
