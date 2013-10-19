@@ -3,7 +3,7 @@
 	url = https://github.com/lingz/gridlock.git
 [submodule "config/public/wp-content/plugins/issuer"]
 	path = config/public/wp-content/plugins/issuer
-	url = git@github.com:lingz/issuer-gazelle.git
+	url = https://github.com/lingz/issuer-gazelle.git
 [submodule "config/public/wp-content/themes/gazelle"]
 	path = config/public/wp-content/themes/gazelle
 	url = https://github.com/lingz/gazelle.git
