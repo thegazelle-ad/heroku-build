@@ -1,5 +1,7 @@
 # Heroku buildpack: Wordpress on Heroku (The Gazelle)
 
+#### Updated to 4.1 through ENV_VAR
+
 ### This is a Heroku buildpack for running [Wordpress](http://wordpress.org) on [Heroku](http://heroku.com)
 
 It uses this [Wordpress](http://github.com/mchung/wordpress-on-heroku) project template to bootstrap a highly tuned Wordpress site built on the following stack:
