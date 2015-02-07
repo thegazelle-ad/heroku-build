@@ -1,4 +1,4 @@
-# Heroku buildpack: Wordpress on Heroku
+# Heroku buildpack: Wordpress on Heroku (The Gazelle)
 
 ### This is a Heroku buildpack for running [Wordpress](http://wordpress.org) on [Heroku](http://heroku.com)
 
