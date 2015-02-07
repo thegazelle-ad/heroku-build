@@ -1,6 +1,6 @@
 # Heroku buildpack: Wordpress on Heroku (The Gazelle)
 
-#### Updated to 4.1 through ENV_VAR
+#### Downgraded to 3.9.3
 
 ### This is a Heroku buildpack for running [Wordpress](http://wordpress.org) on [Heroku](http://heroku.com)
 
