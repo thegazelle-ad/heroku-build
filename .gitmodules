@@ -1,9 +1,9 @@
 [submodule "config/public/wp-content/themes/gridlock"]
 	path = config/public/wp-content/themes/gridlock
-	url = https://github.com/thegazelle-nyuad/gazelle-theme-gridlock.git
+	url = https://github.com/thegazelle-ad/gazelle-theme-gridlock.git
 [submodule "config/public/wp-content/plugins/issuer"]
 	path = config/public/wp-content/plugins/issuer
-	url = https://github.com/thegazelle-nyuad/gazelle-plugin-issuer.git
+	url = https://github.com/thegazelle-ad/gazelle-plugin-issuer.git
 [submodule "config/public/wp-content/themes/gazelle"]
 	path = config/public/wp-content/themes/gazelle
-	url = https://github.com/thegazelle-nyuad/gazelle-theme.git
+	url = https://github.com/thegazelle-ad/gazelle-theme.git
